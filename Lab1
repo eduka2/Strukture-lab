@@ -1,0 +1,35 @@
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define MAX 40
+
+
+typedef struct {
+char ime [MAX];
+char prz [MAX];
+int bodovi;
+} _student;
+
+
+int main()
+{
+    int i,maxbod;
+    _student stud ;
+	maxbod=0
+    FILE *ulz;
+    ulz=fopen("lista.txt","r");
+    while(!feof(ulz))
+        if (fgetc(ulz)=='\n') br++;
+    stud = (_student) malloc(br*sizeof(_student));
+    rewind(ulz);
+    for (i=0 ;i<br;i++) {
+        fscanf(ulz,"%s %s %d" , stud[i].ime,stud[i].prz,&stud[i].bodovi) ;
+		if (stud[i].bodovi>maxbod) maxbod=stud[i].bodovi;
+}
+	printf("\nIme Prezime Bodovi Rel.Bod.) : %s %s (%d) (%d)" , s[i].ime , s[i].prz, s[i].bodovi, ) 
+	for (i=0 ;i<br;i++) {
+        printf(ulz,"%s %s %d" , stud[i].ime,stud[i].prz,&stud[i].bodovi,&stud[i].bodovi/maxbod*100) ;
+    }
+    return 0;
+}
